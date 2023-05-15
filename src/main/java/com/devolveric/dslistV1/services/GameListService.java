@@ -1,6 +1,7 @@
 package com.devolveric.dslistV1.services;
 
 import com.devolveric.dslistV1.dto.GameListDTO;
+import com.devolveric.dslistV1.entities.Game;
 import com.devolveric.dslistV1.entities.GameList;
 import com.devolveric.dslistV1.repositories.GameListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ public class GameListService {
 
     @Autowired
     private GameListRepository gameListRepository;
+    @Autowired
+    private GameService gameService;
 
     @Transactional(readOnly = true)
     public List<GameListDTO> findAll(){

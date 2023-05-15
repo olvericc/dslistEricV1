@@ -1,6 +1,7 @@
 package com.devolveric.dslistV1.dto;
 
 import com.devolveric.dslistV1.entities.Game;
+import com.devolveric.dslistV1.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -13,12 +14,20 @@ public class GameMinDTO {
     public GameMinDTO(){
     }
 
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
+    }
+
     public GameMinDTO(Game entity) {
-        this.id = entity.getId();
-        this.title = entity.getTitle();
-        this.year = entity.getYear();
-        this.imgUrl = entity.getImgUrl();
-        this.shortDescription = entity.getShortDescription();
+        id = entity.getId();
+        title = entity.getTitle();
+        year = entity.getYear();
+        imgUrl = entity.getImgUrl();
+        shortDescription = entity.getShortDescription();
     }
 
     public Long getId() {
