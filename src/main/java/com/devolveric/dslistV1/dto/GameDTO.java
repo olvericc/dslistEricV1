@@ -9,7 +9,7 @@ public class GameDTO {
     private String title;
     private Integer year;
     private String genre;
-    private String plaforms;
+    private String platforms;
     private Double score;
     private String imgUrl;
     private String shortDescription;
@@ -54,12 +54,12 @@ public class GameDTO {
         this.genre = genre;
     }
 
-    public String getPlaforms() {
-        return plaforms;
+    public String getPlatforms() {
+        return platforms;
     }
 
-    public void setPlaforms(String plaforms) {
-        this.plaforms = plaforms;
+    public void setPlatforms(String platforms) {
+        this.platforms = platforms;
     }
 
     public Double getScore() {
